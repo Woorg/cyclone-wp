@@ -1,0 +1,51 @@
+.popup
+  margin: auto
+  max-width: 600px
+  width: 100%
+  background: $white
+  border-radius: 10px
+  // &__tabs
+
+  // &__tabs-nav
+
+  &__nav-item
+    flex-grow: 1
+    &:first-child
+      .popup__nav-link
+        border-radius: 10px 0 0 0
+
+    &:last-child
+      .popup__nav-link
+        border-radius: 0 10px 0 0
+
+    .popup__nav-link
+      padding-top: 11px
+      padding-right: 0
+      padding-left: 0
+      display: flex
+      flex-grow: 1
+      justify-content: center
+      +mq($small)
+        padding-top: 20px
+
+      &:hover
+        background: $blue-hover
+      &:active
+        background: $blue-active
+      &:after
+        display: none
+
+
+
+
+  [role=tab][aria-selected=true]
+    background: $yellow
+    &:hover
+      background: $yellow-light
+
+  &__content
+    padding: 20px
+    min-height: 400px
+
+  .mfp-close
+    display: none
